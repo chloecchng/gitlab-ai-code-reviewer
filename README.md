@@ -22,8 +22,8 @@ Automated GitLab Merge Request code review powered by Google Gemini AI. This bot
 ### 1. Clone and Install
 
 ```bash
-git clone <your-repo-url>
-cd ai-code-review
+git clone git@github.com:bokri/gitlab-ai-code-reviewer.git
+cd gitlab-ai-code-reviewer
 npm install
 ```
 
