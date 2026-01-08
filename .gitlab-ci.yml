@@ -1,0 +1,16 @@
+stages:
+  - review
+
+ai-code-review:
+  stage: review
+  image: node:20-alpine
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - cd gitlab-ai-code-reviewer
+    - npm ci
+    - node src/ci-run.js
+  variables:
+    # These reference the variables you must save in GitLab Settings
+    GEMINI_API_KEY: $GEMINI_API_KEY
+    GITLAB_TOKEN: $GITLAB_TOKEN

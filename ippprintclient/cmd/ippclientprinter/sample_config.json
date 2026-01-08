@@ -1,0 +1,18 @@
+{
+  "global": {
+    "alt_document_formats": {
+      "application/vnd.hp-PCLXL": ["application/pcl6"],
+      "application/vnd.hp-PCL": ["application/pcl"]
+    }
+  },
+  "KONICA MINOLTA bizhub C258": {
+    "alt_document_formats": {
+      "application/vnd.hp-PCLXL": ["application/octet-stream"]
+    }
+  },
+  "RICOH MP C307 PS3": {
+    "pdl_overrides": [
+      "orientation"
+    ]
+  }
+}

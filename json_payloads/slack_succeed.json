@@ -1,0 +1,18 @@
+{
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "$GITLAB_USER_NAME has triggered the pipeline!"
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Project:*$CI_PROJECT_NAME\n*Status:* Succeeded :white_check_mark:\n*Date:* $CI_PIPELINE_CREATED_AT\n*Pipeline:* $CI_PIPELINE_URL"
+			}
+		}
+	]
+}

@@ -1,0 +1,16 @@
+# base image
+FROM golang:1.21.6
+
+# sets the workdir to an "app" directory within the container, common convention to organise app source code here
+WORKDIR /app
+
+# copy all the local files needed to run the program here by using COPY
+COPY go.mod . 
+COPY go.sum .
+COPY main.go .
+
+# compile an executable binary, -o specifies the directory, . specifies where to get the source code
+RUN go build -o bin .
+
+# defines the command that container runs once it starts up
+ENTRYPOINT ["/app/bin"]
