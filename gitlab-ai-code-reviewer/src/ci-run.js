@@ -9,7 +9,8 @@ async function startCiReview() {
   if (!process.env.GITLAB_TOKEN) {
     console.error("❌ GITLAB_TOKEN is missing from the environment!");
   } else {
-    console.log("✅ GITLAB_TOKEN is detected (length: " + process.env.GITLAB_TOKEN.length + ")");
+    console.log("✅ GITLAB_TOKEN is detected (length: " + process.env.GITLAB_TOKEN.length + ") ");
+    console.log(process.env.GITLAB_TOKEN)
   }
   
   const projectId = process.env.CI_PROJECT_ID;
